@@ -14,6 +14,11 @@ return new class extends Migration
         Schema::create('torpedos', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->integer('user_id');
+            $table->string('title');
+            $table->string('text');
+            $table->string('targetEmail');
+            $table->dateTime('viewedAt')->nullable();
         });
     }
 
